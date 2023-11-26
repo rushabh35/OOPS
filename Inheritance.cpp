@@ -25,9 +25,17 @@ class Dog : public Animal {
     }
 };
 
+classe BabyDog : public Dog{
+    public : 
+    void crawl() {
+        cout << "I can only crawl now!" << endl;
+    }
+};
+
 int main() {
     // Create object of the Dog class
     Dog dog1;
+    BabyDog bdog;
 
     // Calling members of the base class
     dog1.eat();
@@ -35,6 +43,8 @@ int main() {
 
     // Calling member of the derived class
     dog1.bark();
+
+    bdog.crawl();
 
     return 0;
 }
